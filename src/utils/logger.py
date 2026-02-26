@@ -1,40 +1,39 @@
-"""
-Logger Utility
-Author: Deanesh Takkallapati
-Purpose: Centralized logging for ETL, transformation, and ML modules
-"""
+# src/utils/logger.py
 
 import logging
-import os
+from logging.handlers import RotatingFileHandler
+from pathlib import Path
 
-def get_logger(name: str, log_file: str = "etl_pipeline.log") -> logging.Logger:
+LOG_FILE = "logs/pipeline.log"  # consolidated log
+MAX_BYTES = 5 * 1024 * 1024     # 5 MB
+BACKUP_COUNT = 3                # keep last 3 log files
+
+def get_logger(name: str, level=logging.INFO):
     """
-    Returns a configured logger instance.
-    Logs to both console and file.
+    Returns a logger that logs to console and a single consolidated file with rollover.
+    Log format: YYYY-MM-DD HH:MM:SS | LEVEL | filename::function | message
     """
     logger = logging.getLogger(name)
-    logger.setLevel(logging.INFO)
+    logger.setLevel(level)
 
     if not logger.handlers:
-        # Ensure log directory exists
-        log_dir = os.path.dirname(log_file)
-        if log_dir and not os.path.exists(log_dir):
-            os.makedirs(log_dir)
+        # Formatter including file name and function
+        formatter = logging.Formatter(
+            '%(asctime)s | %(levelname)s | %(filename)s::%(funcName)s | %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
 
-        # File handler
-        fh = logging.FileHandler(log_file)
-        fh.setLevel(logging.INFO)
         # Console handler
         ch = logging.StreamHandler()
-        ch.setLevel(logging.INFO)
-
-        formatter = logging.Formatter(
-            "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
-        )
-        fh.setFormatter(formatter)
+        ch.setLevel(level)
         ch.setFormatter(formatter)
-
-        logger.addHandler(fh)
         logger.addHandler(ch)
+
+        # Rotating file handler
+        Path("logs").mkdir(parents=True, exist_ok=True)
+        fh = RotatingFileHandler(LOG_FILE, maxBytes=MAX_BYTES, backupCount=BACKUP_COUNT)
+        fh.setLevel(level)
+        fh.setFormatter(formatter)
+        logger.addHandler(fh)
 
     return logger

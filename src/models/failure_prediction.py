@@ -20,6 +20,12 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.append(str(REPO_ROOT))
 
 # -----------------------
+# Logger
+# -----------------------
+from src.utils.logger import get_logger
+logger = get_logger("failure_prediction")
+
+# -----------------------
 # Configurable paths
 # -----------------------
 PROCESSED_DATA_PATH = REPO_ROOT / "data" / "processed" / "device" / "device_features.csv"
@@ -37,11 +43,11 @@ class FailurePredictionModel:
             scale_pos_weight=1
         )
         self.best_threshold = 0.5
-    
+
     def load_data(self, path=PROCESSED_DATA_PATH):
         if not Path(path).exists():
-            print(f"WARNING: Feature file not found at {path}")
-            print("Please run feature_engineering_simple.py first to generate the CSV.")
+            logger.warning(f"Feature file not found at {path}")
+            logger.warning("Please run feature_engineering_simple.py first to generate the CSV.")
             return None, None
         
         df = pd.read_csv(path)
@@ -50,10 +56,10 @@ class FailurePredictionModel:
         
         X = df.drop(columns=["target", "timestamp", "device_id"], errors='ignore')
         y = df["target"]
+        logger.info(f"Loaded feature data with {len(df)} rows and {len(X.columns)} columns")
         return X, y
 
     def plot_f1_vs_threshold(self, y_true, y_probs):
-        """Plot F1-score vs probability threshold"""
         thresholds = np.arange(0.0, 1.0, 0.01)
         f1_scores = [(f1_score(y_true, (y_probs >= t).astype(int))) for t in thresholds]
         
@@ -66,6 +72,7 @@ class FailurePredictionModel:
         plt.legend()
         plt.grid(True)
         plt.show()
+        logger.info("F1-score vs threshold plot displayed")
 
     def tune_threshold(self, y_true, y_probs):
         best_f1 = 0
@@ -76,21 +83,20 @@ class FailurePredictionModel:
             if f1 > best_f1:
                 best_f1 = f1
                 best_thresh = thresh
-        print(f"Best F1={best_f1:.3f} at threshold={best_thresh:.2f}")
+        logger.info(f"Best F1={best_f1:.3f} at threshold={best_thresh:.2f}")
         self.best_threshold = best_thresh
         return best_thresh, best_f1
-    
+
     def train(self, X, y, test_size=0.2, random_state=42):
         if X is None or y is None:
-            print("Training skipped: No data loaded.")
+            logger.warning("Training skipped: No data loaded.")
             return None
         
-        # Handle class imbalance
         pos = sum(y==1)
         neg = sum(y==0)
         if hasattr(self.model, "scale_pos_weight"):
             self.model.scale_pos_weight = neg / max(pos,1)
-            print(f"Set scale_pos_weight={self.model.scale_pos_weight:.2f}")
+            logger.info(f"Set scale_pos_weight={self.model.scale_pos_weight:.2f}")
         
         X_train, X_test, y_train, y_test = train_test_split(
             X, y, test_size=test_size, random_state=random_state, stratify=y
@@ -99,10 +105,7 @@ class FailurePredictionModel:
         self.model.fit(X_train, y_train)
         y_probs = self.model.predict_proba(X_test)[:, 1]
         
-        # Tune threshold
         self.tune_threshold(y_test, y_probs)
-        
-        # Plot F1 vs threshold
         self.plot_f1_vs_threshold(y_test, y_probs)
         
         y_pred = (y_probs >= self.best_threshold).astype(int)
@@ -112,27 +115,29 @@ class FailurePredictionModel:
             "roc_auc": roc_auc_score(y_test, y_probs),
             "threshold": self.best_threshold
         }
+        logger.info(f"Training metrics: {metrics}")
         return metrics
-    
+
     def predict(self, X_new):
         if X_new is None:
-            print("Prediction skipped: No input data provided.")
+            logger.warning("Prediction skipped: No input data provided.")
             return None, None
         probs = self.model.predict_proba(X_new)[:, 1]
         preds = (probs >= self.best_threshold).astype(int)
+        logger.info(f"Predicted {len(preds)} rows")
         return preds, probs
-    
+
     def save_model(self, path=MODEL_SAVE_PATH):
         os.makedirs(os.path.dirname(path), exist_ok=True)
         joblib.dump(self.model, path)
-        print(f"Model saved to: {path}")
-    
+        logger.info(f"Model saved to: {path}")
+
     def load_model(self, path=MODEL_SAVE_PATH):
         if not os.path.exists(path):
-            print(f"WARNING: Model not found at {path}")
+            logger.warning(f"Model not found at {path}")
             return
         self.model = joblib.load(path)
-        print(f"Model loaded from: {path}")
+        logger.info(f"Model loaded from: {path}")
 
 # -----------------------
 # Example usage
@@ -143,5 +148,5 @@ if __name__ == "__main__":
     if X is not None and y is not None:
         metrics = fp_model.train(X, y)
         if metrics:
-            print("Model metrics:", metrics)
+            logger.info(f"Model metrics: {metrics}")
             fp_model.save_model()

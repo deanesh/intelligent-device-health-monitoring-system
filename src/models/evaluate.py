@@ -4,16 +4,21 @@ import sys
 from pathlib import Path
 import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
-import joblib
-import numpy as np
 import matplotlib.pyplot as plt
 from failure_prediction import FailurePredictionModel
+import numpy as np
 
 # -----------------------
 # Add repo root to sys.path
 # -----------------------
 REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.append(str(REPO_ROOT))
+
+# -----------------------
+# Logger
+# -----------------------
+from src.utils.logger import get_logger
+logger = get_logger("evaluate")
 
 # -----------------------
 # Configurable paths
@@ -34,28 +39,30 @@ def plot_f1_vs_threshold(y_true, y_probs, best_threshold):
     plt.grid(True)
     plt.legend()
     plt.show()
+    logger.info("F1-score vs threshold plot displayed")
 
 def main():
-    print("Starting model evaluation...\n")
+    logger.info("Starting model evaluation...")
 
     # Load features
     if not PROCESSED_DATA_PATH.exists():
-        print(f"WARNING: Feature file not found at {PROCESSED_DATA_PATH}")
-        print("Please run feature_engineering_simple.py first.")
+        logger.warning(f"Feature file not found at {PROCESSED_DATA_PATH}")
+        logger.warning("Please run feature_engineering_simple.py first.")
         return
 
     df = pd.read_csv(PROCESSED_DATA_PATH)
     if 'target' not in df.columns:
-        print("Target column not found in features.")
+        logger.warning("Target column not found in features.")
         return
 
     X = df.drop(columns=["target", "timestamp", "device_id"], errors='ignore')
     y = df["target"]
+    logger.info(f"Loaded feature data with {len(df)} rows and {len(X.columns)} columns")
 
     # Load trained model
     if not MODEL_PATH.exists():
-        print(f"WARNING: Model not found at {MODEL_PATH}")
-        print("Please run train.py first.")
+        logger.warning(f"Model not found at {MODEL_PATH}")
+        logger.warning("Please run train.py first.")
         return
 
     model = FailurePredictionModel()
@@ -72,13 +79,12 @@ def main():
         "roc_auc": roc_auc_score(y, y_probs),
         "threshold": model.best_threshold
     }
-
-    print("\nEvaluation metrics on full dataset:")
-    print(metrics)
+    logger.info(f"Evaluation metrics on full dataset: {metrics}")
 
     # Plot F1 vs threshold
     plot_f1_vs_threshold(y, y_probs, model.best_threshold)
-    print("\nEvaluation complete.")
+
+    logger.info("Evaluation complete.")
 
 if __name__ == "__main__":
     main()

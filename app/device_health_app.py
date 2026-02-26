@@ -9,18 +9,23 @@ import matplotlib.pyplot as plt
 # -----------------------
 # Robust path setup
 # -----------------------
-# Determine repo root relative to this file
 REPO_ROOT = Path(__file__).resolve().parents[1]  # app/ → repo root
 MODELS_PATH = REPO_ROOT / "src" / "models"
 sys.path.append(str(REPO_ROOT))
 sys.path.append(str(MODELS_PATH))
 
+# Logger
+from src.utils.logger import get_logger
+logger = get_logger("device_health_app")
+
+# -----------------------
 # Import model class safely
+# -----------------------
 try:
     from failure_prediction import FailurePredictionModel
 except ModuleNotFoundError:
-    st.error("Cannot import FailurePredictionModel from src/models. "
-             "Please check that src/models/failure_prediction.py exists.")
+    logger.error("Cannot import FailurePredictionModel from src/models. Check that src/models/failure_prediction.py exists.")
+    st.error("Cannot import model class. Check logs for details.")
     st.stop()
 
 # -----------------------
@@ -38,12 +43,15 @@ st.title("📊 Device Health Monitoring Dashboard")
 # Load model
 model = FailurePredictionModel()
 if not MODEL_PATH.exists():
+    logger.warning(f"Model not found at {MODEL_PATH}. Please run train.py first.")
     st.warning(f"Model not found at {MODEL_PATH}. Please run train.py first.")
 else:
     model.load_model(MODEL_PATH)
+    logger.info(f"Loaded model from {MODEL_PATH}")
 
-# Load features
+# Load features and predict
 if not FEATURES_PATH.exists():
+    logger.warning(f"Feature file not found at {FEATURES_PATH}. Please run feature_engineering_simple.py first.")
     st.warning(f"Feature file not found at {FEATURES_PATH}. Please run feature_engineering_simple.py first.")
 else:
     df = pd.read_csv(FEATURES_PATH)
@@ -51,9 +59,11 @@ else:
     preds, probs = model.predict(X)
     df["Predicted Failure"] = preds
     df["Failure Probability"] = probs
+    logger.info(f"Predictions generated for {len(df)} rows")
 
     st.subheader("Device Predictions")
-    st.dataframe(df[["timestamp", "device_id", "Predicted Failure", "Failure Probability"]].sort_values(["timestamp","device_id"]))
+    st.dataframe(df[["timestamp", "device_id", "Predicted Failure", "Failure Probability"]]
+                 .sort_values(["timestamp","device_id"]))
 
     # Filter by device
     device_filter = st.selectbox("Filter by Device ID", ["All"] + df["device_id"].unique().tolist())
@@ -72,3 +82,4 @@ else:
     ax.legend()
     ax.grid(True)
     st.pyplot(fig)
+    logger.info("Displayed failure probability plot")
