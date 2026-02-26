@@ -1,23 +1,31 @@
 # src/transformation/load_relational_data.py
 
+import sys
+from pathlib import Path
 import csv
 from datetime import datetime
-from pathlib import Path
 from typing import Dict
 
-from relational_model import Organization, Asset, DeviceClass, Device, Interface, Event
+# Add src and repo root to sys.path so imports work
+sys.path.append(str(Path(__file__).parents[0]))  # src/transformation
+sys.path.append(str(Path(__file__).parents[1]))  # src
 
-DATA_DIR = Path(__file__).parents[2] / "data" / "raw"
+from transformation.relational_model import Organization, Asset, DeviceClass, Device, Interface, Event
+
+# Correct DATA_DIR pointing to repo root
+REPO_ROOT = Path(__file__).parents[1].parent  # intelligent-device-health/
+DATA_DIR = REPO_ROOT / "data" / "raw"
 
 
 def clean_row(row: dict) -> dict:
-    """Strip keys and values to remove whitespace."""
+    """Strip whitespace from keys and values."""
     return {k.strip(): v.strip() if isinstance(v, str) else v for k, v in row.items()}
 
 
 def load_organizations() -> Dict[int, Organization]:
     file = DATA_DIR / "organization" / "organization.csv"
     organizations = {}
+    print(f"Loading organizations from: {file}")
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
@@ -38,6 +46,7 @@ def load_organizations() -> Dict[int, Organization]:
 def load_device_classes() -> Dict[int, DeviceClass]:
     file = DATA_DIR / "device_class" / "device_class.csv"
     device_classes = {}
+    print(f"Loading device_classes from: {file}")
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
@@ -55,6 +64,7 @@ def load_device_classes() -> Dict[int, DeviceClass]:
 def load_assets(organizations: Dict[int, Organization]) -> Dict[int, Asset]:
     file = DATA_DIR / "asset" / "assets.csv"
     assets = {}
+    print(f"Loading assets from: {file}")
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
@@ -83,6 +93,7 @@ def load_assets(organizations: Dict[int, Organization]) -> Dict[int, Asset]:
 def load_devices(assets: Dict[int, Asset], device_classes: Dict[int, DeviceClass]) -> Dict[int, Device]:
     file = DATA_DIR / "device" / "devices.csv"
     devices = {}
+    print(f"Loading devices from: {file}")
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
@@ -105,6 +116,7 @@ def load_devices(assets: Dict[int, Asset], device_classes: Dict[int, DeviceClass
 def load_interfaces(devices: Dict[int, Device]) -> Dict[int, Interface]:
     file = DATA_DIR / "interface" / "interfaces.csv"
     interfaces = {}
+    print(f"Loading interfaces from: {file}")
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
@@ -125,6 +137,7 @@ def load_interfaces(devices: Dict[int, Device]) -> Dict[int, Interface]:
 def load_events(devices: Dict[int, Device], interfaces: Dict[int, Interface]) -> Dict[int, Event]:
     file = DATA_DIR / "event" / "events.csv"
     events = {}
+    print(f"Loading events from: {file}")
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
@@ -134,7 +147,6 @@ def load_events(devices: Dict[int, Device], interfaces: Dict[int, Interface]) ->
             interface_id = row.get("interface_id")
             device = devices.get(device_id)
             interface = interfaces.get(int(interface_id)) if interface_id else None
-            # Handle timestamp safely
             timestamp_str = row.get("event_timestamp") or row.get("timestamp") or ""
             try:
                 event_timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
