@@ -1,0 +1,201 @@
+asset_id,name,organization_id,location,purchase_date,owner
+1,db-71.smith.com,62,East Garychester,2025-07-02,Christina Casey
+2,db-35.lee.com,86,West Jenna,2022-10-17,Robin Miller
+3,email-52.griffith.com,40,Lake Albertville,2023-11-10,Brianna Dominguez
+4,laptop-78.sosa-harris.com,76,Perkinsstad,2023-02-20,Linda Johnson
+5,lt-99.willis.com,7,Jasonton,2023-07-18,Bobby Phillips
+6,db-01.greer.net,16,Robertborough,2024-07-22,Spencer Miller
+7,db-55.logan.com,54,Thomaston,2025-03-19,Jason Wallace
+8,web-60.scott.com,69,North Marvin,2024-12-20,Raymond Brown
+9,web-02.miller-taylor.com,69,Velasquezchester,2024-11-23,Leah Nguyen
+10,srv-48.perez-morris.net,39,Port Steven,2025-05-25,Elizabeth Nguyen
+11,laptop-55.ayala.biz,63,West Crystal,2023-10-31,Stephen Willis
+12,email-74.nash.info,23,Kimberg,2023-07-07,Nicholas Hines
+13,srv-77.nelson.com,1,Duncanmouth,2025-07-17,Damon Bryan
+14,lt-46.hayes.net,30,West Anna,2025-08-04,Robert Martinez
+15,desktop-45.moore-adams.biz,49,Port Jonathan,2023-05-15,Victoria Reed
+16,email-14.mckenzie.org,86,West Amber,2024-04-22,Heather Garcia
+17,srv-91.lopez-myers.com,51,Lake Jenniferland,2023-12-21,Alexis Jones
+18,laptop-98.bruce-young.com,91,South James,2023-10-10,Meagan Garcia
+19,web-49.johnson.com,1,New Allisonhaven,2023-08-14,Ashley Evans
+20,lt-60.lane.info,30,Lake Monica,2024-04-04,Brent Farley
+21,srv-73.carter.org,23,Pettyhaven,2025-04-05,Steven Stevenson
+22,desktop-96.carter.info,77,Russellstad,2025-07-20,David Liu
+23,desktop-48.martin.com,71,East Lauraview,2025-02-22,Donna Sanders
+24,laptop-16.bailey.com,69,North Danielhaven,2025-05-18,Evan Martin
+25,srv-25.moore-campbell.org,6,East Lanceview,2022-11-10,Jennifer Bennett
+26,srv-66.johnson-fitzgerald.com,57,Sanchezland,2024-09-08,Edward Robertson
+27,db-29.king-chavez.biz,26,Greenefurt,2024-06-21,Joseph Cole
+28,desktop-11.west-wheeler.com,20,Salasberg,2025-04-29,Dawn Walters
+29,email-33.lopez.org,84,Georgestad,2022-08-27,Brandon Thompson
+30,db-12.hanna-medina.net,79,Port Kimberlyhaven,2023-11-10,Erica Vargas
+31,srv-08.vargas.biz,39,Port Susanhaven,2023-08-13,Andrea Martinez
+32,lt-68.walter-wolfe.com,20,Hunterville,2023-06-08,Lori Ramirez
+33,laptop-75.mendez.com,4,Lunamouth,2025-04-21,Joy Jones
+34,desktop-39.wang.biz,90,Sarahtown,2024-09-29,Derrick Stanton
+35,lt-86.shaw-morgan.info,74,Johnsonview,2022-11-23,Traci Christensen
+36,srv-64.williams-brooks.info,91,South Kyleshire,2022-09-15,Erik Martin
+37,srv-63.soto.com,80,Farrellstad,2025-03-03,Jessica Barrett
+38,web-03.ball.com,23,North Nichole,2022-10-03,Donald Shaw
+39,lt-38.pace.biz,66,Dennisfurt,2023-02-05,Christopher Lewis
+40,laptop-79.thompson-sanders.net,4,West Crystal,2024-04-19,Heather White
+41,laptop-02.drake-davis.com,49,East Robert,2024-03-21,Valerie Mendoza
+42,srv-33.schwartz.com,7,Port James,2022-12-22,Courtney Rosario
+43,desktop-48.moreno.com,68,West Lori,2023-06-05,Kiara Copeland
+44,db-95.mack.com,24,Josefort,2023-10-05,Henry Flores
+45,srv-89.robinson-martin.com,5,Adrianaberg,2022-11-22,Jerry Salas
+46,desktop-05.holland-hall.org,32,West Jeffrey,2023-09-22,Adam George
+47,laptop-13.parker.com,16,North Robertburgh,2023-04-02,Caitlin Lin
+48,web-18.ramos.com,15,Keithburgh,2025-06-25,John Mills
+49,desktop-06.carrillo.net,52,East Jeffreyfort,2023-03-17,Dana Gonzalez
+50,srv-37.fisher-combs.com,52,North Kayleemouth,2024-09-12,Melanie Hughes
+51,laptop-81.warren-burke.org,91,Chavezhaven,2023-11-08,Damon Hopkins
+52,email-01.mcfarland-higgins.com,71,Port Christopher,2023-11-20,Lauren Koch
+53,laptop-07.ortiz.info,97,West Shannonton,2025-07-17,Jeremy Aguilar
+54,desktop-41.navarro.com,13,South April,2023-04-27,Stephanie Singh
+55,laptop-75.kirk.com,2,Rodriguezmouth,2024-07-07,Beverly Shannon
+56,desktop-17.smith.net,85,Lake Isaac,2024-03-01,Raymond Walker
+57,db-35.odonnell.com,29,Pageside,2024-01-15,Heidi Wilkinson
+58,laptop-10.chandler-johnson.biz,21,North Ashley,2023-07-09,Carrie Higgins
+59,desktop-15.reid.info,13,Kaitlynville,2023-03-23,April Johnson
+60,laptop-12.williams.org,29,North Jasonbury,2025-06-25,Mr. David Ferguson DDS
+61,desktop-79.smith.info,27,Millerton,2023-12-20,Dominique Martinez
+62,email-63.lara.com,21,East Antonio,2025-01-23,Nancy Gutierrez
+63,srv-51.johnson.com,33,New Christopher,2023-10-31,Monica Hawkins
+64,lt-45.pearson.info,81,Karenland,2025-05-12,Adam Webster
+65,laptop-64.mckenzie-peck.com,32,New Mackenzie,2024-11-28,Bryan Hill
+66,lt-43.flowers.com,47,New Robertland,2022-10-25,Jim Thomas
+67,srv-10.finley-williams.info,29,Hollyland,2023-11-08,Jamie Jimenez
+68,db-93.tran.biz,38,East Joshuastad,2024-06-03,Alexis Turner
+69,desktop-39.barr.biz,66,West Nathaniel,2023-02-15,Lindsay Valdez
+70,desktop-47.lopez-kim.com,31,New Brianshire,2024-11-08,Steven Jacobson
+71,web-75.bryan.net,33,Lake Brianview,2023-10-16,Sarah Reese
+72,desktop-09.parrish-harding.biz,11,Garytown,2023-01-18,David Smith
+73,desktop-05.hernandez.com,1,Torresmouth,2024-01-09,Diana Thomas
+74,email-10.long.com,31,Victoriaburgh,2023-01-09,Allison Greene
+75,laptop-41.chandler.biz,12,Ericmouth,2024-02-25,Alicia Williams
+76,web-50.greer.com,73,Evanland,2023-03-05,Carl Sandoval
+77,web-62.davenport.com,63,East Williamland,2023-11-27,William White
+78,desktop-80.sanchez.com,44,Thompsonmouth,2023-08-14,Patrick Reilly
+79,lt-95.stewart.com,68,Williamshaven,2022-10-11,Donna Solis
+80,lt-01.castaneda.com,3,Youngland,2025-04-03,Daniel Davis
+81,email-67.wiley.com,42,South Ericfurt,2023-11-20,Dana Ray
+82,desktop-53.fernandez.org,92,Abbottshire,2024-06-14,Alyssa Moore
+83,lt-63.ward.com,81,Thomastown,2022-11-23,Bryan Mcgee
+84,lt-07.collins-hawkins.com,31,Stewartbury,2023-06-07,Matthew Edwards
+85,db-74.gross.com,27,Hornstad,2024-03-14,Amanda Hatfield
+86,email-96.cowan.org,95,Josephmouth,2025-01-11,Paul Miller
+87,lt-53.glass-watson.com,40,Travisview,2023-07-16,Tyler Hunter
+88,lt-09.wilson-bridges.com,81,Tinachester,2024-08-29,Angela Cooper
+89,laptop-96.castillo.biz,91,Alvaradoborough,2024-06-24,Kristina Lin
+90,web-05.frank.com,48,Meyerfort,2023-10-24,Taylor Calhoun
+91,db-27.klein.com,5,Garciamouth,2024-08-31,Mary Hernandez
+92,email-28.smith.com,53,Taylorbury,2023-09-01,Cheryl Cook
+93,web-98.baker-pierce.com,29,West Alexanderport,2022-08-27,Brian Alvarez
+94,db-82.mann.org,28,South Lawrence,2024-07-11,Sean Dixon
+95,srv-65.brown.info,99,New Sandra,2023-02-02,Teresa Edwards
+96,srv-69.petersen.com,79,Lauraton,2024-08-17,Christopher Cole
+97,lt-56.collins-pierce.com,10,Andersonville,2024-09-11,Richard Petty
+98,email-43.miller.com,23,Erichaven,2023-05-05,Kaitlin Miller DDS
+99,laptop-81.bell-taylor.com,46,West Kathleen,2024-07-03,Jacqueline Thompson
+100,desktop-52.hanson-hull.info,99,Melissaborough,2024-10-28,Jennifer Adkins DVM
+101,email-84.smith.info,64,Port Alexandraport,2025-07-18,Charles Burns
+102,db-06.valdez-wong.com,86,Port Justin,2022-11-04,Laura Robinson
+103,email-38.cohen.com,37,Mendozafurt,2023-08-04,Candice Hansen
+104,db-22.morgan.biz,98,Port Paul,2023-12-07,Justin Burns
+105,srv-38.atkins-sims.com,66,Port Dillon,2023-06-24,Ronnie Bryant
+106,lt-85.york-sanchez.com,93,North Phillipstad,2024-05-30,Kimberly Herring
+107,email-30.miller-daniels.info,81,West Mark,2025-03-09,Sue Martinez
+108,srv-55.buck.com,45,Brettborough,2024-01-25,Todd Shaw
+109,db-17.larson.com,92,New Nicoleland,2025-03-19,Kenneth Smith
+110,laptop-50.brooks.org,28,Port Connorfort,2024-06-10,Daniel Garcia
+111,desktop-18.moore.org,79,South Valerieton,2022-11-12,Emily Rivera
+112,srv-00.berry.com,47,Lake Annaborough,2025-02-07,Ms. Amy Reynolds
+113,srv-16.camacho.com,26,Lake Michael,2025-07-24,Christina Pratt
+114,db-17.reyes.com,54,New Frank,2025-07-12,Penny Graham
+115,laptop-68.cisneros.org,97,Garciaborough,2023-06-11,Sean Mills
+116,web-12.gordon.com,1,East Sarah,2024-04-13,Barry Watkins
+117,db-68.shields-rivera.net,71,Austinborough,2022-12-11,Kathleen Spencer
+118,db-84.lopez.biz,17,Williamsstad,2022-09-19,Victor Holmes
+119,laptop-51.cruz-pratt.biz,69,West Garrett,2023-09-19,Kristy Valentine
+120,srv-97.garcia.com,34,Lake Yvonne,2023-09-10,Raven Garcia
+121,desktop-49.thompson-armstrong.net,99,Chandlerton,2023-03-11,Raymond Andrews
+122,srv-03.cox.biz,11,Markport,2024-05-11,Erin Mendez
+123,db-58.harrington.biz,48,West Zachary,2023-07-04,Stephen Stout
+124,db-87.weber.com,6,Taraside,2025-04-18,Steven Strong
+125,web-41.townsend.net,74,Elliottport,2022-11-14,Steven Ward
+126,email-68.hall.com,34,East Charlotte,2023-10-31,Wanda Bell
+127,db-24.tapia.com,17,Hillport,2024-03-18,Charlotte Petty
+128,srv-16.key.com,11,Williamsfurt,2024-09-09,Danny Frazier
+129,web-95.miller-jordan.net,61,Virginiatown,2024-04-05,Mark Winters
+130,web-79.king.com,71,Wallermouth,2025-07-10,Sean Martinez
+131,web-58.harrell.info,25,Laurenfurt,2025-01-19,Mark Thomas
+132,web-70.robbins-haas.com,15,New Steven,2025-04-22,Eric Thomas
+133,lt-73.rodriguez.com,73,Maldonadoville,2024-09-16,Kyle Mcbride
+134,lt-12.lee.com,50,Josephberg,2024-07-13,Timothy Harrison
+135,srv-74.mitchell-anderson.com,55,Andrewfurt,2024-01-14,Jason Daugherty
+136,srv-75.davis-walton.com,3,East Michelle,2023-08-27,Mr. Scott Rodriguez
+137,db-63.nguyen.net,94,North Sandra,2024-08-23,April Klein
+138,laptop-47.hamilton.info,48,East Jamesberg,2023-11-04,Raymond Smith
+139,email-46.allen.com,20,Gibsonland,2023-09-05,John Phelps
+140,lt-75.jackson.org,58,North Russell,2024-01-01,Nicole Garcia
+141,desktop-44.romero.com,58,Mendezfort,2023-04-01,Brent Black
+142,web-17.morrow-mccarty.com,98,Hancockchester,2024-10-08,Victor Ruiz
+143,srv-70.thornton.org,57,West Patrick,2023-07-04,Melissa Tate
+144,lt-61.ward-gutierrez.com,31,South Christopher,2022-12-14,Heidi Clark
+145,laptop-59.palmer-brown.info,65,West Kendrafort,2023-07-01,Anthony Smith
+146,lt-99.graves.org,7,Stephaniestad,2024-04-09,Tracey Jimenez
+147,db-90.hill.com,71,Mitchellport,2023-02-13,Patricia Orozco
+148,lt-87.rogers-kaufman.com,90,East Johnny,2023-08-01,Kelly Tyler
+149,lt-32.ortega.com,66,South Cassandra,2024-11-12,Kevin Mcclure
+150,web-37.collins.info,91,Harperbury,2023-06-10,Jon Price
+151,desktop-60.barrett.info,23,Rachaelview,2024-12-24,Annette Hayes
+152,email-32.may-white.org,54,Howardtown,2025-02-26,Derek Anderson
+153,email-35.taylor-walton.com,96,Port Lisa,2023-08-25,Emily Johnston
+154,email-17.davis.com,89,South Stevenfurt,2024-01-03,Kelly Adams
+155,laptop-66.allen.com,74,Cookchester,2024-08-05,Melissa Wood
+156,desktop-72.chase.org,79,Port Danielside,2023-09-24,Michael Dominguez
+157,srv-83.ortiz.com,8,Ayalaport,2024-06-26,Frederick Woods MD
+158,desktop-52.dudley.com,77,East Omar,2023-06-21,Jose White
+159,srv-85.nelson-rowland.com,51,Lake Anthony,2024-03-06,David Jackson
+160,web-32.meyer.com,58,Frankborough,2025-02-13,Miranda Patrick
+161,srv-53.smith.com,25,Denniston,2023-01-22,John Garcia
+162,web-83.roman.com,49,Russoview,2023-04-24,Margaret Benson
+163,laptop-38.young.com,65,Lambertton,2023-07-14,Joseph Gomez
+164,srv-75.dixon.com,54,Kevinfurt,2023-08-01,Jessica Beltran
+165,db-55.harrison-brown.info,99,Crystalview,2024-12-30,Robert Hall
+166,lt-79.rodriguez.com,28,New Kelly,2024-07-14,Wendy Cooper
+167,lt-74.rivera.com,39,Bowmanborough,2024-04-29,Kyle Bell
+168,email-91.gonzalez.com,56,Angelabury,2024-11-09,Richard Duke
+169,web-55.browning.com,97,New Ericborough,2023-09-16,Aaron Johnson
+170,srv-81.blevins-manning.com,17,Lake Ryan,2024-03-14,Julie Brock
+171,web-98.mahoney.com,32,Glennport,2023-10-14,William Miller
+172,laptop-80.patterson.com,89,Castroville,2022-08-25,Cynthia Jackson
+173,db-37.martin.info,62,East Luisville,2025-02-07,Christopher Trujillo
+174,web-90.yoder.com,25,Leemouth,2023-07-22,Cody Ferguson
+175,web-04.davis.biz,33,South Davidside,2022-10-06,Cindy Farmer
+176,web-55.murphy-crane.com,36,West Courtneyport,2025-03-24,Larry Whitaker
+177,email-26.jackson-mack.info,20,Monicaview,2023-08-07,Jason Allen
+178,laptop-19.newman-carter.org,14,South Rachelfurt,2022-08-22,Patricia Smith
+179,db-72.hines.com,66,Port Nicholas,2024-04-17,James Ross II
+180,email-98.hunt.com,71,Carlaborough,2024-01-25,Nicholas Adams III
+181,web-86.solis-montoya.com,70,Lake Jennifer,2022-09-22,Jennifer Calderon
+182,web-19.brown-aguirre.com,49,West Elizabethton,2024-01-26,Karen Anderson
+183,lt-99.brown.com,42,Davisburgh,2023-01-10,Samantha Miller
+184,srv-07.decker.com,62,East Lisafort,2023-12-24,Jermaine Leon
+185,db-48.mckinney.com,46,Port David,2025-07-22,Maria Flores
+186,lt-54.howard.com,46,East Kenneth,2023-05-06,Melvin Murphy
+187,srv-94.arroyo.com,21,Bullockfort,2025-07-16,Austin Spears
+188,srv-46.hernandez.com,14,Port Patricia,2023-05-02,Kenneth Crawford
+189,desktop-41.chase-swanson.org,30,Matthewland,2023-01-25,Charles Greene
+190,db-83.myers-perry.com,98,North Maria,2025-06-03,Nina Smith
+191,lt-11.young.com,90,East Richard,2022-09-26,Teresa Stewart
+192,email-96.watts.info,94,Port Wendy,2022-08-20,Richard Shaw
+193,desktop-51.romero.com,27,New Alecborough,2025-01-26,Francisco Myers
+194,srv-12.robinson-compton.org,90,Courtneybury,2024-09-25,Scott Zavala
+195,desktop-27.diaz-williams.com,98,Crawfordbury,2023-07-30,Sarah Davis
+196,desktop-22.short.com,22,East Jennifertown,2023-01-11,Elizabeth Chase
+197,lt-52.gomez.org,56,Bishopland,2022-10-25,Robert Smith
+198,srv-77.rodriguez-beck.com,89,Meredithtown,2024-12-28,Margaret Diaz
+199,email-91.barnett-durham.com,10,East Michaelville,2024-04-29,Barbara Bryant
+200,desktop-68.diaz.com,33,Port Gary,2024-11-20,Donna Arnold
