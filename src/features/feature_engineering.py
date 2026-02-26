@@ -1,4 +1,4 @@
-# feature_engineering_simple.py
+# src/features/feature_engineering_simple.py
 
 import pandas as pd
 import numpy as np
@@ -13,6 +13,10 @@ import joblib
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DATA_PATH = REPO_ROOT / "data" / "aggregated_device_1h.csv"
 MODEL_PATH = REPO_ROOT / "models" / "device_failure_model_balanced_simple.pkl"
+FEATURE_PATH = REPO_ROOT / "data" / "processed" / "device" / "device_features.csv"
+
+# Ensure processed folder exists
+FEATURE_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 # -----------------------
 # Load data
@@ -26,7 +30,7 @@ print(f"Loaded data: {df.shape[0]} rows")
 # -----------------------
 print("Creating simple features...")
 
-# Basic features
+# Basic failure rate
 df["failure_rate"] = df["failure_events"] / df["total_events"]
 df["failure_rate"] = df["failure_rate"].fillna(0)
 
@@ -36,7 +40,7 @@ df["rolling_failure_3"] = df.groupby("device_id")["failure_events"].transform(
 )
 
 # -----------------------
-# Create target
+# Create target (next window failure)
 # -----------------------
 print("Creating target (next window failure)...")
 df["target"] = df.groupby("device_id")["failure_events"].shift(-1).fillna(0)
@@ -44,6 +48,12 @@ df["target"] = (df["target"] > 0).astype(int)
 
 # Drop rows with missing target
 df = df.dropna()
+
+# -----------------------
+# Save feature-engineered data
+# -----------------------
+df.to_csv(FEATURE_PATH, index=False)
+print(f"Feature-engineered data saved to: {FEATURE_PATH}")
 
 # -----------------------
 # Select features & target
@@ -64,7 +74,12 @@ print(f"Training on {len(X_train)} rows, validating on {len(X_val)} rows")
 # -----------------------
 # Train model
 # -----------------------
-model = RandomForestClassifier(n_estimators=100, random_state=42, class_weight="balanced")
+model = RandomForestClassifier(
+    n_estimators=100,
+    random_state=42,
+    class_weight="balanced",
+    n_jobs=-1
+)
 model.fit(X_train, y_train)
 print("Model training complete!")
 
