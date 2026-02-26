@@ -6,14 +6,31 @@ import csv
 from datetime import datetime
 from typing import Dict
 
-# Add src and repo root to sys.path so imports work
-sys.path.append(str(Path(__file__).parents[0]))  # src/transformation
-sys.path.append(str(Path(__file__).parents[1]))  # src
+# -----------------------
+# Repo root and paths
+# -----------------------
+REPO_ROOT = Path(__file__).resolve().parents[2]  # repo root
+SRC_PATH = REPO_ROOT / "src"
+TRANS_PATH = SRC_PATH / "transformation"
 
+sys.path.append(str(SRC_PATH))
+sys.path.append(str(TRANS_PATH))
+sys.path.append(str(REPO_ROOT))
+
+# -----------------------
+# Imports
+# -----------------------
+from src.utils.logger import get_logger
 from transformation.relational_model import Organization, Asset, DeviceClass, Device, Interface, Event
 
-# Correct DATA_DIR pointing to repo root
-REPO_ROOT = Path(__file__).parents[1].parent  # intelligent-device-health/
+# -----------------------
+# Logger setup
+# -----------------------
+logger = get_logger("load_relational_data")  # logs go to logs/pipeline.log with rollover
+
+# -----------------------
+# Data directory
+# -----------------------
 DATA_DIR = REPO_ROOT / "data" / "raw"
 
 
@@ -25,7 +42,7 @@ def clean_row(row: dict) -> dict:
 def load_organizations() -> Dict[int, Organization]:
     file = DATA_DIR / "organization" / "organization.csv"
     organizations = {}
-    print(f"Loading organizations from: {file}")
+    logger.info("Loading organizations from: %s", file)
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
@@ -46,7 +63,7 @@ def load_organizations() -> Dict[int, Organization]:
 def load_device_classes() -> Dict[int, DeviceClass]:
     file = DATA_DIR / "device_class" / "device_class.csv"
     device_classes = {}
-    print(f"Loading device_classes from: {file}")
+    logger.info("Loading device_classes from: %s", file)
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
@@ -64,36 +81,55 @@ def load_device_classes() -> Dict[int, DeviceClass]:
 def load_assets(organizations: Dict[int, Organization]) -> Dict[int, Asset]:
     file = DATA_DIR / "asset" / "assets.csv"
     assets = {}
-    print(f"Loading assets from: {file}")
+    logger.info("Loading assets from: %s", file)
+
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
+
         for row in reader:
             row = clean_row(row)
+
             org_id = int(row.get("organization_id") or 0)
             org = organizations.get(org_id)
+
+            # Correct column mapping
+            asset_name = row.get("name", "")
+            asset_location = row.get("location", "")
+            asset_owner = row.get("owner", "")
+            purchase_raw = row.get("purchase_date", "")
+
             asset_purchase_date = None
-            if row.get("asset_purchase_date"):
+            if purchase_raw:
                 try:
-                    asset_purchase_date = datetime.strptime(row["asset_purchase_date"], "%Y-%m-%d").date()
+                    asset_purchase_date = datetime.strptime(
+                        purchase_raw, "%Y-%m-%d"
+                    ).date()
                 except ValueError:
-                    pass
+                    logger.warning(
+                        "Invalid date format for asset_id %s: %s",
+                        row.get("asset_id"),
+                        purchase_raw
+                    )
+
             asset = Asset(
                 asset_id=int(row.get("asset_id") or 0),
-                asset_name=row.get("asset_name") or "",
+                asset_name=asset_name,
                 organization=org,
-                asset_location=row.get("asset_location") or "",
+                asset_location=asset_location,
                 asset_purchase_date=asset_purchase_date,
-                asset_owner=row.get("asset_owner") or ""
+                asset_owner=asset_owner
             )
+
             assets[asset.asset_id] = asset
+
     return assets
 
 
 def load_devices(assets: Dict[int, Asset], device_classes: Dict[int, DeviceClass]) -> Dict[int, Device]:
     file = DATA_DIR / "device" / "devices.csv"
     devices = {}
-    print(f"Loading devices from: {file}")
+    logger.info("Loading devices from: %s", file)
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
@@ -116,7 +152,7 @@ def load_devices(assets: Dict[int, Asset], device_classes: Dict[int, DeviceClass
 def load_interfaces(devices: Dict[int, Device]) -> Dict[int, Interface]:
     file = DATA_DIR / "interface" / "interfaces.csv"
     interfaces = {}
-    print(f"Loading interfaces from: {file}")
+    logger.info("Loading interfaces from: %s", file)
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
@@ -137,7 +173,7 @@ def load_interfaces(devices: Dict[int, Device]) -> Dict[int, Interface]:
 def load_events(devices: Dict[int, Device], interfaces: Dict[int, Interface]) -> Dict[int, Event]:
     file = DATA_DIR / "event" / "events.csv"
     events = {}
-    print(f"Loading events from: {file}")
+    logger.info("Loading events from: %s", file)
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
@@ -149,8 +185,16 @@ def load_events(devices: Dict[int, Device], interfaces: Dict[int, Interface]) ->
             interface = interfaces.get(int(interface_id)) if interface_id else None
             timestamp_str = row.get("event_timestamp") or row.get("timestamp") or ""
             try:
-                event_timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
+                # Handle ISO 8601 with T or space
+                if "T" in timestamp_str:
+                    event_timestamp = datetime.strptime(timestamp_str, "%Y-%m-%dT%H:%M:%S")
+                else:
+                    event_timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
             except (ValueError, TypeError):
+                logger.warning(
+                    "Invalid timestamp for event_id %s: %s",
+                    row.get("event_id"), timestamp_str
+                )
                 event_timestamp = datetime.now()
             event = Event(
                 event_id=int(row.get("event_id") or 0),
@@ -172,6 +216,13 @@ def load_all_data():
     interfaces = load_interfaces(devices)
     events = load_events(devices, interfaces)
 
+    logger.info("Loaded %d organizations", len(organizations))
+    logger.info("Loaded %d device_classes", len(device_classes))
+    logger.info("Loaded %d assets", len(assets))
+    logger.info("Loaded %d devices", len(devices))
+    logger.info("Loaded %d interfaces", len(interfaces))
+    logger.info("Loaded %d events", len(events))
+
     return {
         "organizations": organizations,
         "device_classes": device_classes,
@@ -184,9 +235,3 @@ def load_all_data():
 
 if __name__ == "__main__":
     db = load_all_data()
-    print(f"Loaded {len(db['organizations'])} organizations")
-    print(f"Loaded {len(db['assets'])} assets")
-    print(f"Loaded {len(db['device_classes'])} device_classes")
-    print(f"Loaded {len(db['devices'])} devices")
-    print(f"Loaded {len(db['interfaces'])} interfaces")
-    print(f"Loaded {len(db['events'])} events")
