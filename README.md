@@ -1,14 +1,9 @@
-Here is a much simpler and clean `README.md` you can use:
-
----
-
 # Intelligent Device Health Monitoring System
 
 This project monitors device health, detects anomalies, predicts failures, and displays insights using a Streamlit dashboard.
 
 It follows a modular pipeline structure for data ingestion, transformation, health scoring, feature engineering, machine learning, and visualization.
 
----
 
 ## 📁 Project Structure
 
