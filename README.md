@@ -8,23 +8,30 @@ It follows a modular pipeline structure for data ingestion, transformation, heal
 ## 📁 Project Structure
 
 ```
-intelligent-device-health/
+intelligent-device-health-monitoring-system/
 │
 ├── data/               # Raw and processed datasets
+│   ├── raw/            # Original CSVs (source of truth)
+│   └── processed/      # Cleaned, merged, feature-engineered data
+│
 ├── notebooks/          # Exploratory analysis
 ├── src/                # Core source code
-│   ├── ingestion/
-│   ├── transformation/
-│   ├── health/
-│   ├── features/
-│   ├── models/
-│   ├── inference/
-│   └── utils/
+│   ├── ingestion/      # Data loading modules
+│   ├── transformation/ # Data merging & relational modeling
+│   ├── health/         # Health scoring per device/interface
+│   ├── features/       # Feature engineering for ML
+│   ├── models/         # ML models & evaluation
+│   ├── inference/      # Inference pipelines
+│   └── utils/          # Utility functions (logging, helpers)
 │
-├── app/                # Streamlit dashboard
-├── config.yaml         # Configuration file
-├── requirements.txt    # Dependencies
-└── main.py             # Pipeline runner
+├── pipeline/           # Orchestration of full pipeline
+│   └── run_pipeline.py
+│
+├── app/                # Streamlit dashboard application
+│   └── device_health_app.py
+├── main.py             # Entry point to run the full pipeline
+├── config.yaml         # Configurations (paths, thresholds, hyperparameters)
+└── requirements.txt    # Python dependencies
 ```
 
 ---
