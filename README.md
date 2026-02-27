@@ -46,7 +46,7 @@ python main.py
 ### 3. Start the dashboard
 
 ```bash
-streamlit run app/device_health_app.py
+python .\app\app.py
 ```
 
 ---
