@@ -148,7 +148,7 @@ def get_alerts_list():
 
     merged['device_ip'] = merged['ip_address'].fillna("Unknown IP")
     merged['organization_name'] = merged['name'].fillna("Unknown Org")
-    merged_sorted = merged.sort_values('timestamp', ascending=False).head(10)
+    merged_sorted = merged.sort_values('timestamp', ascending=False).head(20)
 
     table_rows = []
     for _, row in merged_sorted.iterrows():

@@ -24,7 +24,7 @@ app.layout = dbc.Container([
             dcc.Tab(label='Device Health Overview', value='tab-overview'),
             dcc.Tab(label='Anomalies', value='tab-anomalies'),
             dcc.Tab(label='Organizations KPI', value='tab-org-kpi'),
-            dcc.Tab(label='Alerts', value='tab-alerts')
+            dcc.Tab(label='Events', value='tab-alerts')
         ]), width=12)
     ], className="mb-3"),
 
