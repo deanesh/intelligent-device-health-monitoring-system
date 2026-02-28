@@ -18,8 +18,8 @@ Monitor device health, detect anomalies, and visualize insights — fully **even
 ---
 
 ## 🗂 Folder Structure
-```
 
+```
 intelligent-device-health-monitoring-system/
 │
 ├── app/                  # Streamlit/Dash dashboard + services
@@ -49,7 +49,7 @@ intelligent-device-health-monitoring-system/
 ├── config.yaml           # Configurations (paths, thresholds, hyperparameters)
 └── requirements.txt      # Python dependencies
 
-````
+```
 
 ---
 
