@@ -84,4 +84,6 @@ python app/app.py
 Python | Pandas | NumPy | Matplotlib | Seaborn | Plotly | Dash | Bootstrap
 
 > 💡 Quick onboarding: run `main.py` → explore the **EDA notebook** → launch `app/app.py`
+
+```
 ```
