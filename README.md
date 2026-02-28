@@ -1,12 +1,15 @@
-```markdown
+
+
+`````markdown
 # 🚀 Intelligent Device Health Monitoring
 
 Monitor device health, detect anomalies, and visualize insights — fully **event-driven** and interactive.  
 
 ---
+
 ## 🗂 Folder Structure
 
-```
+````text
 intelligent-device-health-monitoring-system/
 │
 ├── app/                  # Streamlit/Dash dashboard + services
@@ -35,27 +38,26 @@ intelligent-device-health-monitoring-system/
 ├── main.py               # Pipeline entry point
 ├── config.yaml           # Configurations (paths, thresholds, hyperparameters)
 └── requirements.txt      # Python dependencies
-
-```
-
-
-## 🎯 Features
-- Event-based **device health scoring**: Critical / Warning / Healthy  
-- Interactive **Dashboard** with 4 tabs:
-  - **Overview** → KPIs + stacked health bar  
-  - **Country KPI** → Assets/Devices/Organizations by country  
-  - **Devices** → Device list + health status  
-  - **Events** → Event table & stats  
-- **EDA Notebook** (`exploratory_analysis.ipynb`) with top 10 countries, stored vs actual validations  
-- Modular pipeline: load → transform → health → dashboard  
+`````
 
 ---
 
+## 🎯 Features
 
+* Event-based **device health scoring**: Critical / Warning / Healthy
+* Interactive **Dashboard** with 4 tabs:
+
+  * **Overview** → KPIs + stacked health bar
+  * **Country KPI** → Assets/Devices/Organizations by country
+  * **Devices** → Device list + health status
+  * **Events** → Event table & stats
+* **EDA Notebook** (`exploratory_analysis.ipynb`) with top 10 countries, stored vs actual validations
+* Modular pipeline: load → transform → health → dashboard
 
 ---
 
 ## ⚡ Quick Start
+
 ```bash
 # Install dependencies
 pip install -r requirements.txt
@@ -68,7 +70,7 @@ jupyter notebook notebooks/exploratory_analysis.ipynb
 
 # Launch dashboard
 python app/app.py
-````
+```
 
 ---
 
@@ -87,5 +89,4 @@ Python | Pandas | NumPy | Matplotlib | Seaborn | Plotly | Dash | Bootstrap
 
 > 💡 Quick onboarding: run `main.py` → explore the **EDA notebook** → launch `app/app.py`
 
-```
-```
+
