@@ -1,82 +1,87 @@
-# Intelligent Device Health Monitoring System
+```markdown
+# 🚀 Intelligent Device Health Monitoring
 
-This project monitors device health, detects anomalies, predicts failures, and displays insights using a Streamlit dashboard.
+Monitor device health, detect anomalies, and visualize insights — fully **event-driven** and interactive.  
 
-It follows a modular pipeline structure for data ingestion, transformation, health scoring, feature engineering, machine learning, and visualization.
+---
 
+## 🎯 Features
+- Event-based **device health scoring**: Critical / Warning / Healthy  
+- Interactive **Dashboard** with 4 tabs:
+  - **Overview** → KPIs + stacked health bar  
+  - **Country KPI** → Assets/Devices/Organizations by country  
+  - **Devices** → Device list + health status  
+  - **Events** → Event table & stats  
+- **EDA Notebook** (`exploratory_analysis.ipynb`) with top 10 countries, stored vs actual validations  
+- Modular pipeline: load → transform → health → dashboard  
 
-## 📁 Project Structure
+---
 
+## 🗂 Folder Structure
 ```
+
 intelligent-device-health-monitoring-system/
 │
-├── data/               # Raw and processed datasets
-│   ├── raw/            # Original CSVs (source of truth)
-│   └── processed/      # Cleaned, merged, feature-engineered data
+├── app/                  # Streamlit/Dash dashboard + services
+│   ├── app.py            # Dashboard main file
+│   └── services/
+│       └── device_health_app.py
 │
-├── notebooks/          # Exploratory analysis
-├── src/                # Core source code
-│   ├── ingestion/      # Data loading modules
-│   ├── transformation/ # Data merging & relational modeling
-│   ├── health/         # Health scoring per device/interface
-│   ├── features/       # Feature engineering for ML
-│   ├── models/         # ML models & evaluation
-│   ├── inference/      # Inference pipelines
-│   └── utils/          # Utility functions (logging, helpers)
+├── data/
+│   ├── raw/              # Original CSVs (source of truth)
+│   └── processed/        # Cleaned / snapshot CSVs
 │
-├── pipeline/           # Orchestration of full pipeline
+├── notebooks/
+│   └── exploratory_analysis.ipynb
+│
+├── pipeline/
 │   └── run_pipeline.py
 │
-├── app/                # Streamlit dashboard application
-│   └── device_health_app.py
-├── main.py             # Entry point to run the full pipeline
-├── config.yaml         # Configurations (paths, thresholds, hyperparameters)
-└── requirements.txt    # Python dependencies
-```
+├── src/                  # Core modules
+│   ├── transformation/   # Data merging & relational modeling
+│   ├── health/           # Health scoring logic
+│   ├── features/         # Feature engineering for ML
+│   ├── models/           # ML models & evaluation
+│   ├── inference/        # Inference pipelines
+│   └── utils/            # Utility functions
+│
+├── main.py               # Pipeline entry point
+├── config.yaml           # Configurations (paths, thresholds, hyperparameters)
+└── requirements.txt      # Python dependencies
+
+````
 
 ---
 
-## 🚀 How to Run
-
-### 1. Install dependencies
-
+## ⚡ Quick Start
 ```bash
+# Install dependencies
 pip install -r requirements.txt
-```
 
-### 2. Run the pipeline
-
-```bash
+# Run full pipeline
 python main.py
-```
 
-### 3. Start the dashboard
+# Explore data
+jupyter notebook notebooks/exploratory_analysis.ipynb
 
-```bash
-python .\app\app.py
-```
+# Launch dashboard
+python app/app.py
+````
 
 ---
 
-## 🔍 What It Does
+## 📊 Health Scoring
 
-* Loads and cleans relational device data
-* Merges organization, asset, device, interface, and event data
-* Calculates device and interface health scores
-* Performs anomaly detection
-* Predicts potential device failures
-* Displays results in a Streamlit dashboard
+* Start at **100** for all devices
+* Deduct points per event type: `high_cpu`, `interface_down`, `critical_error`, etc.
+* Categorize into **Critical / Warning / Healthy**
+* Fully **event-driven**, no legacy health columns
 
 ---
 
 ## 🛠 Tech Stack
 
-* Python
-* Pandas
-* Scikit-learn
-* Streamlit
-* Matplotlib / Seaborn
+Python | Pandas | NumPy | Matplotlib | Seaborn | Plotly | Dash | Bootstrap
 
----
+> 💡 Quick onboarding: run `main.py` → explore the **EDA notebook** → launch `app/app.py`
 
-This project demonstrates an end-to-end machine learning pipeline for inventory device health monitoring 
