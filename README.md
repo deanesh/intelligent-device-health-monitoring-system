@@ -4,19 +4,6 @@
 Monitor device health, detect anomalies, and visualize insights — fully **event-driven** and interactive.  
 
 ---
-
-## 🎯 Features
-- Event-based **device health scoring**: Critical / Warning / Healthy  
-- Interactive **Dashboard** with 4 tabs:
-  - **Overview** → KPIs + stacked health bar  
-  - **Country KPI** → Assets/Devices/Organizations by country  
-  - **Devices** → Device list + health status  
-  - **Events** → Event table & stats  
-- **EDA Notebook** (`exploratory_analysis.ipynb`) with top 10 countries, stored vs actual validations  
-- Modular pipeline: load → transform → health → dashboard  
-
----
-
 ## 🗂 Folder Structure
 
 ```
@@ -50,6 +37,21 @@ intelligent-device-health-monitoring-system/
 └── requirements.txt      # Python dependencies
 
 ```
+
+
+## 🎯 Features
+- Event-based **device health scoring**: Critical / Warning / Healthy  
+- Interactive **Dashboard** with 4 tabs:
+  - **Overview** → KPIs + stacked health bar  
+  - **Country KPI** → Assets/Devices/Organizations by country  
+  - **Devices** → Device list + health status  
+  - **Events** → Event table & stats  
+- **EDA Notebook** (`exploratory_analysis.ipynb`) with top 10 countries, stored vs actual validations  
+- Modular pipeline: load → transform → health → dashboard  
+
+---
+
+
 
 ---
 
