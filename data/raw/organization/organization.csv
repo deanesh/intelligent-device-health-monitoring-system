@@ -1,101 +1,101 @@
-organization_id,name,industry,address,contact_email,contact_phone
-1,Robinson-Sims,Social worker,"7043 Willis Parkway, Wilsonville, IN 91620",csaunders@johnson.com,386-682-4794x2042
-2,"Oliver, Mclaughlin and Bryant",Airline pilot,"9710 Thomas Locks Suite 880, Kellyfurt, WY 71488",richard65@garza.org,(530)213-3492x341
-3,"Gregory, Smith and Wilson",Actor,"Unit 2686 Box 0878, DPO AP 42910",suzanne29@price.info,933-455-9374x918
-4,"Hays, Wright and Riddle","Investment banker, corporate","071 Ruth Causeway Suite 263, Port Erika, ME 99326",nicolehenderson@gray.org,775.980.3588x83111
-5,Grant-Weiss,Microbiologist,"3341 Rosales Pines, Sarahborough, MS 54749",brownemily@preston.com,524-743-0278
-6,"George, Johnson and Sanchez","Development worker, international aid","8685 Juan Turnpike, New Jillburgh, SD 58067",coxbrian@marshall.net,844.643.9152x67492
-7,"White, Bell and Martin","Lecturer, further education","650 Martinez Cove Apt. 550, Rebeccaville, VA 19535",jerrysolomon@graves.com,+1-562-291-3856x830
-8,Murphy Inc,Cartographer,"8555 Gonzalez Light, Sherryshire, IN 97305",bobbyhiggins@roberts.com,565.504.2093
-9,Huber Group,Herbalist,"734 Debbie Shoal Apt. 574, Port Scottview, OR 16285",curtis71@tapia-black.com,+1-221-653-7520
-10,Williams LLC,Tax inspector,"4363 Michelle Lock Apt. 595, Lake Matthew, NV 35199",gregg61@smith.org,374.474.2598x57356
-11,White-Martin,Hotel manager,"2374 Stacy Points Apt. 887, New Catherinechester, ME 98036",amanda48@hernandez.com,+1-658-380-4732
-12,"Miller, Barron and Patton",Occupational hygienist,"27549 Allen Points, South Andrewland, PW 49211",lyonskendra@mcdonald-torres.com,001-934-879-8940x61937
-13,Love PLC,Charity officer,"69090 Michelle Via Suite 603, New Anna, NJ 17559",heathervalenzuela@bailey.com,001-996-461-4409
-14,Moore PLC,"Programmer, multimedia","9927 Bonilla Groves, Gregoryburgh, MI 32487",clarkjerry@taylor.net,001-515-376-9295x4948
-15,"Cohen, Miller and Parker",Publishing rights manager,"81652 Leah Lock Suite 517, South Victor, MI 09031",guzmandonna@brown.com,001-273-310-7386x089
-16,Miller-Howard,Cabin crew,"55050 Christine Park, Jerrystad, KS 68684",jacksondiane@horne-jackson.com,001-422-457-1807
-17,Jones PLC,Computer games developer,"783 Keith Skyway Suite 409, New Caitlyn, UT 12604",katie22@fields.com,(211)899-2060x32849
-18,Williams-Carter,Sports development officer,"774 Thomas Islands Suite 323, Riveraburgh, MA 59157",joann01@patel-chambers.com,595-471-3273
-19,Baker Ltd,Lexicographer,"14911 Christina Loaf, Port Connorport, NM 17014",pyang@hernandez.com,+1-619-374-4285x7031
-20,"James, Garcia and Johnson","Geologist, wellsite","PSC 0104, Box 6605, APO AA 84693",watsonoscar@miller-robinson.org,001-976-273-6975
-21,Pruitt-Martinez,"Engineer, civil (consulting)","06034 Solomon Meadow Suite 610, Lake Courtney, OK 26039",bburton@rogers.biz,392-536-3297
-22,Garcia-Mcintosh,"Administrator, sports","5219 Sabrina Dale Suite 008, Amandamouth, OH 93731",scottlittle@nguyen-harris.com,2712541438
-23,"Rogers, Miller and Munoz",Best boy,"Unit 2357 Box 4807, DPO AP 58522",sanforddaniel@clark.net,(202)227-4329x60472
-24,"Rivera, Rodriguez and Smith",Bookseller,"USNV Sanchez, FPO AA 60588",vevans@merritt.biz,442.871.1964
-25,"Williams, Valdez and Potts",Music therapist,"020 Richard Groves Apt. 933, Lake Joanne, NH 32066",zgrant@gonzalez.net,921.586.7013x1764
-26,"Jones, Walsh and Mckinney",Chartered legal executive (England and Wales),"PSC 6348, Box 1062, APO AA 07826",nicholasschultz@smith.com,(916)948-6551x817
-27,Myers-Peters,Magazine features editor,"49039 George Mountains, North Michelleburgh, AS 60556",xdaniels@smith-baker.biz,701-220-7604
-28,Allison Inc,Geophysical data processor,"3269 Angela Pass Apt. 686, East Amyborough, TX 86271",wklein@ortega.net,922.849.9361
-29,Cordova Inc,Agricultural consultant,"11608 John Prairie Suite 581, West Alexandriaborough, AR 59566",kimberlywilliams@barnes.net,+1-944-510-8648
-30,Martinez-Stewart,Office manager,"375 Wilson Harbors Suite 279, Garciaton, PR 21567",nicoleellis@moreno.com,370-548-2210x98559
-31,Bowen-Ho,Financial controller,"7434 Elizabeth Cliff, Jameschester, FM 72838",robert46@jacobs-evans.net,(929)367-6621x68881
-32,Edwards-Rollins,"Teacher, music","46655 Garner Mountains, Coreymouth, WA 38486",lopezmichael@hansen-williams.com,2866613315
-33,"Henderson, Little and Mclaughlin",Volunteer coordinator,"168 Bonnie Prairie Suite 035, Margarettown, MI 90391",sarmstrong@dixon.info,4796296228
-34,"Jefferson, Wood and Lewis",Paediatric nurse,"592 Martin Burg Suite 063, Kristenport, KS 79842",nicole76@alvarado.com,+1-875-480-0271x9605
-35,Sampson-Benson,Fine artist,"123 Love Vista, East Hailey, NH 50860",morrowteresa@jones.com,9048154513
-36,Peters-Alexander,Hospital pharmacist,"48831 Randall Dam Suite 778, Curtisshire, VT 42117",brandicollins@dyer.net,001-300-291-5796x61565
-37,"Hayden, Carroll and Nguyen",Call centre manager,"Unit 0200 Box 9069, DPO AE 11686",glenncain@robinson-ho.com,971.717.4841x568
-38,"Santiago, Pugh and Brandt",Psychotherapist,"916 Maria Shores, East Jessicashire, ID 04845",paulafarrell@kemp.com,(350)504-9620
-39,Warren-Hendrix,Editorial assistant,"9213 Turner Camp, Sethbury, PA 04982",zjohnson@miller-franklin.biz,4188417766
-40,"Lewis, Wallace and Hawkins",Dentist,"2620 Kathleen Divide, Petersberg, ME 79100",lynnbright@melendez-nichols.biz,(704)868-7987x8065
-41,Carpenter-Caldwell,Gaffer,"08590 Dan Gateway, Hensleyville, AZ 81665",xcontreras@hebert-aguilar.com,+1-466-891-8542x033
-42,Campbell-Pennington,Biomedical scientist,"393 Taylor Flat, Martintown, MO 69183",rjohnson@koch.com,001-848-735-1307x801
-43,Stuart PLC,Podiatrist,"89032 Jesus Viaduct Apt. 602, Port Harryfurt, WA 07284",jameswagner@andrews-mann.com,(247)582-4282x83176
-44,Rodriguez Ltd,Secretary/administrator,"79267 Frank Trail Suite 527, Jonesbury, SC 37645",stephanie78@robbins-lopez.org,001-873-485-9065x195
-45,Kane-Thomas,"Designer, graphic","Unit 2612 Box 9432, DPO AP 54641",donald30@sullivan.org,3012943184
-46,Pierce PLC,"Research officer, political party","PSC 3369, Box 6051, APO AA 18697",ronald93@hamilton.net,+1-311-405-4876
-47,"Barnes, Krause and Brown","Development worker, international aid","57258 Berg Track, Lake Elizabethshire, VT 77383",kathymason@baker-campbell.com,(649)914-4011x8015
-48,"Lee, Cross and Frank",Proofreader,"6133 Diana Creek Suite 062, Lindsayside, MP 93107",ggates@schroeder.com,2426184793
-49,"Wright, Hoffman and Byrd","Merchandiser, retail","2737 Jason Pass Apt. 212, West Jasmine, GA 82657",mckinneyrobert@rivera.net,(678)242-8813x418
-50,Martin and Sons,Optometrist,"929 Moran Falls Apt. 861, Chadmouth, WI 67067",alexismack@garcia-santiago.biz,001-697-340-6002x33968
-51,"Sanchez, Luna and Hicks",Television floor manager,"498 Samantha Drive Apt. 848, East Jason, AL 17512",murphymark@reed-garcia.net,(363)956-2047x68902
-52,Beard LLC,Building surveyor,"25418 Elliott Cliffs, East Nathaniel, NC 78023",mckaydaniel@nash.org,725-354-0197x47879
-53,Martin-Newton,Interior and spatial designer,"1688 Greene Drive Apt. 027, New Angelicaton, CA 26223",riosjustin@marshall-sampson.info,+1-211-574-3587x8271
-54,"Lee, Barnett and Myers",Television camera operator,"82726 James Pike, Royfort, AS 90332",wayne42@soto.com,+1-783-679-5619
-55,Jones-Olson,Catering manager,"408 Zavala Cove Suite 197, Martinbury, OH 69726",james51@marshall.com,001-743-482-0616
-56,"Campbell, Brown and Henderson",Hotel manager,"64494 Middleton Haven Apt. 256, Williamburgh, DC 62953",igarcia@taylor.org,001-575-216-5847x7934
-57,Peterson-Benson,"Pharmacist, community","732 Hughes Springs Suite 196, Kellyhaven, FM 05706",mrichards@carpenter-phillips.com,(669)553-7887
-58,Thompson Inc,Aeronautical engineer,"9897 Benjamin Shores Suite 696, New Karenborough, OR 04972",gabriela90@cole-stewart.biz,+1-326-547-7184x176
-59,Moore-Gross,Music tutor,"PSC 5456, Box 4148, APO AP 95087",castillokaitlin@rosales-sawyer.biz,001-222-341-9353x51034
-60,Long-Burnett,"Presenter, broadcasting","2611 Cody Extension Apt. 613, Port Austinborough, AZ 49998",kevinmoore@hunt.biz,3626812536
-61,"Ryan, Hampton and Atkinson","Embryologist, clinical","69461 Stevens Junctions, Mclaughlinchester, NM 20898",moorescott@long-harper.org,(629)588-6598x0147
-62,Washington-Carlson,Proofreader,"6453 Eric Skyway Suite 336, Raymondville, DE 31811",ffrost@gomez.com,+1-208-408-2802x68789
-63,Matthews-Roberts,"Engineer, maintenance","177 Jeffrey Terrace, Taylorbury, IN 58158",danielpatterson@kennedy.org,+1-240-693-0449x84474
-64,Henderson Group,Health promotion specialist,"6646 Jones Land, North Thomashaven, WV 99393",donnahale@english.net,534-587-9857x17068
-65,"Williams, Nguyen and Ballard",Broadcast presenter,"4006 Danny Vista, Thomasmouth, KY 75911",cruzjason@curtis.com,821-605-1692
-66,"Burke, Mcpherson and Castro",Homeopath,"00156 Freeman Parkway Suite 173, Benjamintown, NY 39400",richard41@hill.com,001-912-289-0575
-67,"Dixon, Mitchell and Myers",Surgeon,"8112 Black Via, Stokesview, SC 94001",theresa32@horne.com,(388)973-3845x1928
-68,Booker-Marsh,Recycling officer,"896 Carrie Grove, Johnathanbury, TX 22521",kvillegas@bass.biz,+1-984-399-0480
-69,Barnes-Flores,Energy manager,"60608 Michael Isle Suite 555, North Paul, KY 85361",harperjoshua@carr.com,886.709.2205x9561
-70,Harrison LLC,Special educational needs teacher,"78331 Jeremiah Groves Apt. 895, Lake Janettown, PA 86645",rharvey@edwards.com,522-656-8806x78579
-71,Collins PLC,Health visitor,"USNS Campbell, FPO AE 61236",kristenmcdaniel@flores.info,455-998-8671x3121
-72,Graham Group,"Copywriter, advertising","30040 Jonathan Ports, West Brandonport, VI 43137",justin31@swanson.org,(704)933-7584x3468
-73,"Green, Reyes and Flores",Estate manager/land agent,"55820 Hutchinson Islands Apt. 482, Wardmouth, AK 93072",penacrystal@johnson.com,(890)660-1171x6714
-74,Stone-Perez,Chartered public finance accountant,"33451 Collins Corner, Erinchester, AR 19720",velazquezdonald@avila-howard.com,001-798-626-7668x0786
-75,"Young, Herring and Garcia",Housing manager/officer,"495 Ramirez Tunnel Apt. 922, Johnsonside, WA 38767",carlosmorgan@romero-hatfield.org,+1-907-464-3222x9429
-76,"Wang, Wheeler and Callahan",Fast food restaurant manager,"USS Mcclure, FPO AE 04701",snelson@lyons.com,+1-414-556-0178
-77,"Johnson, Bennett and Allen",Research scientist (physical sciences),"8749 Robert Neck, Ryanview, WY 91636",castrocharles@welch-young.com,849-979-4973x17682
-78,Hudson LLC,Estate agent,"262 Margaret Mountain Suite 073, Port Diana, WI 75537",gharmon@miller-joyce.com,(474)687-1498x686
-79,Jenkins Ltd,"Doctor, hospital","PSC 8078, Box 0869, APO AE 86495",dannyanderson@chambers.com,355-295-8970x6661
-80,Medina-Miles,Theatre manager,"6932 Heather Squares, Ryanshire, MP 61238",atkinsjohn@wallace-rhodes.com,6866172064
-81,Reynolds-Jones,Software engineer,"93609 Keith Creek, Millsburgh, NH 83430",gregory36@saunders-woods.com,468.766.3990x41164
-82,Pearson-Quinn,"Teacher, primary school","3910 Kenneth Spring Apt. 226, West Adrianland, AS 19562",harrislisa@wade.com,817.721.0220
-83,Parsons Ltd,Haematologist,"34196 Boyd Lodge Suite 799, Lauraborough, KS 79257",lindsey21@parker.com,517-424-3313x758
-84,Barber-Taylor,Museum/gallery exhibitions officer,"305 Bray Wells Apt. 269, Dustinchester, OH 93984",ivanholmes@malone.biz,+1-564-394-9285x387
-85,"Leblanc, White and Thomas",International aid/development worker,"1655 Lisa Vista Apt. 886, Jonesfort, KY 91127",erikagonzales@hale-suarez.org,344.575.5380x951
-86,Harmon PLC,Archaeologist,"01602 Benjamin Estates, West William, OR 93034",perrymia@terry-glass.com,509-858-5823x309
-87,Marshall Inc,Lobbyist,"807 Johnson Loaf, Joannside, GA 91009",danielmclaughlin@hernandez-powell.com,001-234-458-1165x748
-88,Huynh-Mathis,"Scientist, research (physical sciences)","9029 Christina Mall Apt. 178, South Adamfurt, MO 44426",rfrank@medina.net,+1-892-985-2880x813
-89,"Choi, Collins and Thomas",IT consultant,"27878 Black Knoll Suite 315, North Brenda, OR 04639",cconley@wagner-campbell.com,(841)561-3715
-90,Howard Inc,Animal technologist,"61904 Taylor Harbors, Johnsonmouth, WY 34358",margaret88@byrd-walsh.net,001-518-816-4949x51226
-91,Bishop-Cameron,Broadcast engineer,"9232 Jose Manors, Robertburgh, VT 72050",vsmith@mills-anderson.com,209-905-3103
-92,"Carpenter, Perez and Rasmussen","Psychologist, counselling","657 Tanner Row Suite 702, Donaldshire, AK 45600",reyesdanielle@garcia-rivera.info,608.582.7845
-93,"Harris, Daniels and Aguirre",IT sales professional,"5201 Denise Pike Apt. 048, North Michaelton, IA 99198",bradleyamanda@wright.info,(607)414-4230x27895
-94,Conner Group,Recruitment consultant,"99555 Williams Curve, Williamsmouth, HI 58967",adamsampson@foster.com,(484)388-1068x69738
-95,"Rodriguez, Elliott and Castaneda",Optometrist,"Unit 7953 Box 5001, DPO AP 55910",wmason@morgan-taylor.info,+1-642-420-1998x83459
-96,"Walsh, Vargas and Jackson","Surveyor, minerals","86071 Martinez Manors Suite 966, West Victoriafort, IL 65543",lporter@thomas.com,(241)562-6546x13990
-97,"Griffith, Ray and Williams",Camera operator,"0238 Matthew Pass, East Joseph, MI 10772",garywilson@reynolds.com,+1-965-911-1348
-98,"Thompson, Rogers and Trujillo",Paramedic,"8743 Torres Alley Suite 718, New Angelahaven, MH 41153",taylorjustin@hoffman.com,403-973-5966x186
-99,"Buchanan, Ryan and Kim","Chemist, analytical","77031 Charles Fort Apt. 725, West Erin, AL 93166",millerwendy@allison-ortiz.org,001-874-868-8216x81537
-100,Jackson-King,Museum/gallery curator,"1231 David Stream, Melissachester, HI 10649",aprilcarpenter@poole-sampson.org,(474)567-8629x7836
+organization_id,name,industry,address,contact_email,contact_phone,country
+1,Nexora Technologies Inc,Information Technology,500 Market St San Francisco CA 94105,itops@nexora.com,386-682-4794x2042,USA
+2,BlueWave Financial Group,Banking & Financial Services,120 King St W Toronto ON M5H 1J9,noc@bluewavefg.ca,(530)213-3492x341,Canada
+3,AeroLink Aviation Ltd,Aviation,Heathrow Business Park London TW6 1QG,ops@aerolink.co.uk,933-455-9374x918,United Kingdom
+4,Medisphere Health Systems,Healthcare,800 Medical Plaza Dr Dallas TX 75230,support@medispherehealth.com,775.980.3588x83111,USA
+5,GreenGrid Energy Corp,Renewable Energy,45 King William St Adelaide SA 5000,infra@greengrid.com.au,524-743-0278,Australia
+6,Orion Telecom Services,Telecommunications,210 MG Road Bengaluru 560001,noc@oriontelecom.in,844.643.9152x67492,India
+7,MetroRetail Holdings,Retail,350 Fifth Ave New York NY 10118,retailops@metroretail.com,+1-562-291-3856x830,USA
+8,Al Noor Banking PJSC,Banking,Sheikh Zayed Rd Dubai,it@alnoorbank.ae,565.504.2093,UAE
+9,EuroLogix Supply Chain,Logistics,12 HafenCity Hamburg 20457,support@eurologix.de,-8393,Germany
+10,Sakura Manufacturing Co.,Manufacturing,2-11-3 Meguro Tokyo 153-0063,operations@sakuramfg.jp,374.474.2598x57356,Japan
+11,Andes Mining Group,Mining,Av Apoquindo 3000 Santiago,infra@andesmining.cl,-5769,Chile
+12,FinTrust Capital Markets,Investment Management,1 Raffles Place Singapore 048616,itops@fintrust.sg,001-934-879-8940x61937,Singapore
+13,Nordic Cloud Solutions,Cloud Services,Gustav Adolfs Torg 8 Stockholm 11152,support@nordiccloud.se,001-996-461-4409,Sweden
+14,Horizon Pharma Ltd,Pharmaceuticals,75 Longwood Ave Boston MA 02115,tech@horizonpharma.com,001-515-376-9295x4948,USA
+15,Gulf PetroEnergy,Oil & Gas,Corniche Rd Doha,network@gulfpetro.qa,001-273-310-7386x089,Qatar
+16,Pacific Insurance Group,Insurance,88 Phillip St Sydney NSW 2000,itsupport@pacificins.com,001-422-457-1807,Australia
+17,Datacrest Analytics,Data & AI Services,22 Rue de Rivoli Paris 75004,ops@datacrest.fr,(211)899-2060x32849,France
+18,PrimeCare Hospitals,Healthcare,14 Park Lane Johannesburg 2196,it@primecare.co.za,595-471-3273,South Africa
+19,Baltic Maritime Ltd,Shipping,5 Tallinna mnt Tallinn 10145,infra@balticmaritime.ee,+1-619-374-4285x7031,Estonia
+20,RedRock Construction,Construction,600 Congress Ave Austin TX 78701,support@redrockbuild.com,001-976-273-6975,USA
+21,Zenith E-Commerce,E-Commerce,101 Collins St Melbourne VIC 3000,tech@zenithecom.com.au,392-536-3297,Australia
+22,Atlas Cybersecurity,Cybersecurity,300 N LaSalle St Chicago IL 60654,soc@atlascs.com,2712541438,USA
+23,Iberia Utilities SA,Utilities,Calle Gran Via 28 Madrid 28013,noc@iberiautilities.es,(202)227-4329x60472,Spain
+24,MapleLeaf Education Group,Education,250 Yonge St Toronto ON M5B2L7,it@mapleleafedu.ca,442.871.1964,Canada
+25,Kinetic Motors GmbH,Automotive,Mercedesstrasse 120 Stuttgart 70372,infra@kineticmotors.de,921.586.7013x1764,Germany
+26,Global Freightways,Logistics,900 Biscayne Blvd Miami FL 33132,noc@globalfreight.com,(916)948-6551x817,USA
+27,Vertex Banking Corp,Banking,200 Bay St Toronto ON M5J2J2,infra@vertexbank.ca,701-220-7604,Canada
+28,Helios Solar Pvt Ltd,Energy,Plot 45 Andheri East Mumbai 400069,ops@heliossolar.in,922.849.9361,India
+29,EverTrust Insurance,Insurance,10 Queen St Auckland 1010,it@evertrust.co.nz,-10101,New Zealand
+30,Arctic Data Centers,Cloud Services,Strandveien 50 Oslo 1366,support@arcticdc.no,370-548-2210x98559,Norway
+31,Continental Telecom,Telecommunications,Mainzer Landstrasse 50 Frankfurt 60325,noc@ctelecom.de,(929)367-6621x68881,Germany
+32,SilverLine Retail Group,Retail,580 George St Sydney NSW 2000,ops@silverlineretail.com,2866613315,Australia
+33,NorthStar Airlines,Aviation,1 Aviation Way Chicago IL 60666,ops@northstarair.com,4796296228,USA
+34,Optima Healthcare Network,Healthcare,4000 Cambridge St Houston TX 77030,it@optimahealth.com,+1-875-480-0271x9605,USA
+35,TriAxis Manufacturing,Manufacturing,Industrial Area Phase 2 Pune 411019,infra@triaxis.in,9048154513,India
+36,BluePeak Software,Information Technology,550 Burrard St Vancouver BC V6C2B5,support@bluepeak.ca,001-300-291-5796x61565,Canada
+37,Delta Construction Group,Construction,45 Marina Blvd Singapore 018987,ops@deltaconstruction.sg,971.717.4841x568,Singapore
+38,Sunrise Pharma Corp,Pharmaceuticals,200 Park Ave New York NY 10166,it@sunrisepharma.com,(350)504-9620,USA
+39,Omega Oil Services,Oil & Gas,King Fahd Rd Riyadh 12271,network@omegaoil.sa,4188417766,Saudi Arabia
+40,TransEuro Logistics,Logistics,Via Torino 60 Milan 20123,support@transeuro.it,(704)868-7987x8065,Italy
+41,Prime Digital Media,Media & Broadcasting,Hollywood Blvd Los Angeles CA 90028,tech@primedigital.com,+1-466-891-8542x033,USA
+42,SecureNet Solutions,Cybersecurity,Canary Wharf London E14 5AB,soc@securenet.co.uk,001-848-735-1307x801,United Kingdom
+43,Evergreen Utilities,Utilities,Gran Via 45 Barcelona 08007,infra@evergreen.es,(247)582-4282x83176,Spain
+44,Quantum Analytics,Data & AI Services,5 Shenton Way Singapore 068808,ops@quantumanalytics.sg,001-873-485-9065x195,Singapore
+45,Metro Hospitals Group,Healthcare,MG Road Kochi 682016,it@metrohospitals.in,3012943184,India
+46,Pacific Shipping Lines,Shipping,Victoria Harbour Hong Kong,infra@pacificship.hk,-5591,Hong Kong
+47,Alpine Banking AG,Banking,Bahnhofstrasse 1 Zurich 8001,it@alpinebank.ch,(649)914-4011x8015,Switzerland
+48,Ironclad Manufacturing,Manufacturing,Detroit MI 48226,ops@ironcladmfg.com,2426184793,USA
+49,SkyHigh Telecom,Telecommunications,Kuala Lumpur City Centre 50088,noc@skyhigh.my,(678)242-8813x418,Malaysia
+50,NextGen Retailers,Retail,Dubai Marina Dubai,ops@nextgenretail.ae,001-697-340-6002x33968,UAE
+51,CloudNova Systems,Cloud Services,Seattle WA 98101,support@cloudnova.com,(363)956-2047x68902,USA
+52,Vertex Energy Solutions,Energy,Calgary AB T2P1J9,infra@vertexenergy.ca,725-354-0197x47879,Canada
+53,Oceanic Airlines,Aviation,Sydney Airport NSW 2020,ops@oceanicair.com.au,+1-211-574-3587x8271,Australia
+54,MedCore Clinics,Healthcare,Johannesburg 2000,it@medcore.co.za,-7080,South Africa
+55,GlobalMart Commerce,E-Commerce,Berlin 10115,tech@globalmart.de,001-743-482-0616,Germany
+56,SecureBank Africa,Banking,Nairobi 00100,it@securebank.ke,001-575-216-5847x7934,Kenya
+57,Helix Pharma Europe,Pharmaceuticals,Brussels 1000,ops@helixpharma.eu,(669)553-7887,Belgium
+58,TransAsia Logistics,Logistics,Bangkok 10110,noc@transasia.co.th,+1-326-547-7184x176,Thailand
+59,RedStone Mining,Mining,Perth WA 6000,infra@redstonemining.com.au,001-222-341-9353x51034,Australia
+60,InnovaSoft Technologies,Information Technology,Hyderabad 500081,support@innovasoft.in,3626812536,India
+61,BlueHarbor Insurance,Insurance,Boston MA 02110,it@blueharbor.com,(629)588-6598x0147,USA
+62,Continental Hospitals,Healthcare,Berlin 10117,it@continentalhosp.de,+1-208-408-2802x68789,Germany
+63,Atlas Manufacturing Group,Manufacturing,Manchester M1 1AE,ops@atlasmfg.co.uk,+1-240-693-0449x84474,United Kingdom
+64,GreenWave Renewables,Renewable Energy,Copenhagen 1050,infra@greenwave.dk,534-587-9857x17068,Denmark
+65,DigitalEdge Media,Media & Broadcasting,Toronto ON M5V2T6,tech@digitaledge.ca,821-605-1692,Canada
+66,Prime Telecom Nigeria,Telecommunications,Lagos 101233,noc@primetelecom.ng,001-912-289-0575,Nigeria
+67,SilverOak Construction,Construction,Dallas TX 75201,ops@silveroakbuild.com,(388)973-3845x1928,USA
+68,NovaBank India,Banking,New Delhi 110001,it@novabank.in,-1862,India
+69,Pacific Data Systems,Cloud Services,Auckland 1010,support@pacificdata.nz,886.709.2205x9561,New Zealand
+70,UrbanRetail Group,Retail,Chicago IL 60601,ops@urbanretail.com,522-656-8806x78579,USA
+71,NextEra Utilities,Utilities,Miami FL 33131,infra@nexterautilities.com,455-998-8671x3121,USA
+72,Helios Aerospace,Aerospace,Toulouse 31000,ops@heliosaero.fr,(704)933-7584x3468,France
+73,MedLife Hospitals,Healthcare,Singapore 238801,it@medlife.sg,(890)660-1171x6714,Singapore
+74,GlobalFin Investments,Investment Management,Hong Kong Central,it@globalfin.hk,001-798-626-7668x0786,Hong Kong
+75,SmartGrid Energy,Energy,Abu Dhabi,infra@smartgrid.ae,+1-907-464-3222x9429,UAE
+76,BluePeak Consulting,IT Services,London EC2R 8AH,support@bluepeak.co.uk,-1147,United Kingdom
+77,SecureWave Cyber,Cybersecurity,Tel Aviv 61000,soc@securewave.co.il,849-979-4973x17682,Israel
+78,IronGate Logistics,Logistics,Sao Paulo 01000-000,noc@irongate.com.br,(474)687-1498x686,Brazil
+79,Zenith Motors,Automotive,Seoul 04524,infra@zenithmotors.kr,355-295-8970x6661,South Korea
+80,CloudSphere Ltd,Cloud Services,Dublin D02,it@cloudsphere.ie,6866172064,Ireland
+81,NorthBridge Bank,Banking,Edinburgh EH2 2LL,it@northbridgebank.co.uk,468.766.3990x41164,United Kingdom
+82,PrimeSteel Industries,Manufacturing,Chennai 600001,ops@primesteel.in,817.721.0220,India
+83,Sunrise Telecom,Telecommunications,Jakarta 10220,noc@sunrisetel.id,517-424-3313x758,Indonesia
+84,EuroCare Hospitals,Healthcare,Rome 00186,it@eurocare.it,+1-564-394-9285x387,Italy
+85,Vertex Retail Europe,Retail,Amsterdam 1012,ops@vertexretail.eu,344.575.5380x951,Netherlands
+86,Arctic Energy Corp,Energy,Reykjavik 101,infra@arcticenergy.is,509-858-5823x309,Iceland
+87,GlobalAir Cargo,Aviation,Doha 00000,ops@globalaircargo.qa,001-234-458-1165x748,Qatar
+88,Quantum Bank Asia,Banking,Manila 1000,it@quantumbank.ph,+1-892-985-2880x813,Philippines
+89,BlueShield Insurance,Insurance,Atlanta GA 30303,it@blueshieldins.com,(841)561-3715,USA
+90,TransNational Logistics,Logistics,Mexico City 06000,noc@transnational.mx,001-518-816-4949x51226,Mexico
+91,Optima Data Centers,Cloud Services,Dubai Internet City,support@optimadc.ae,209-905-3103,UAE
+92,Helix BioLabs,Biotechnology,Basel 4051,ops@helixbio.ch,608.582.7845,Switzerland
+93,MetroPower Utilities,Utilities,Los Angeles CA 90013,infra@metropower.com,(607)414-4230x27895,USA
+94,NextWave Software,Information Technology,Austin TX 78759,support@nextwave.com,(484)388-1068x69738,USA
+95,Continental Shipping,Shipping,Rotterdam 3011,noc@continentalship.nl,+1-642-420-1998x83459,Netherlands
+96,Prime Mining Corp,Mining,Johannesburg 2001,infra@primemining.co.za,(241)562-6546x13990,South Africa
+97,BlueSky Media Group,Media & Broadcasting,Los Angeles CA 90036,tech@blueskymedia.com,-3223,USA
+98,GreenField Agriculture,Agriculture,Winnipeg MB R3C4T3,ops@greenfieldagri.ca,403-973-5966x186,Canada
+99,Summit Construction Intl,Construction,Kuala Lumpur 50050,infra@summitbuild.my,001-874-868-8216x81537,Malaysia
+100,Vertex Global Holdings,Investment Group,New York NY 10005,it@vertexglobal.com,(474)567-8629x7836,USA

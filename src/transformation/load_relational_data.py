@@ -33,12 +33,16 @@ logger = get_logger("load_relational_data")  # logs go to logs/pipeline.log with
 # -----------------------
 DATA_DIR = REPO_ROOT / "data" / "raw"
 
-
+# -----------------------
+# Utility
+# -----------------------
 def clean_row(row: dict) -> dict:
     """Strip whitespace from keys and values."""
     return {k.strip(): v.strip() if isinstance(v, str) else v for k, v in row.items()}
 
-
+# -----------------------
+# Loaders
+# -----------------------
 def load_organizations() -> Dict[int, Organization]:
     file = DATA_DIR / "organization" / "organization.csv"
     organizations = {}
@@ -54,7 +58,8 @@ def load_organizations() -> Dict[int, Organization]:
                 org_industry=row.get("industry") or row.get("org_industry") or "",
                 org_address=row.get("address") or row.get("org_address") or "",
                 org_email=row.get("contact_email") or row.get("org_email") or "",
-                org_phone=row.get("contact_phone") or row.get("org_phone") or ""
+                org_phone=row.get("contact_phone") or row.get("org_phone") or "",
+                org_country=row.get("country") or ""  # new
             )
             organizations[org.organization_id] = org
     return organizations
@@ -89,22 +94,14 @@ def load_assets(organizations: Dict[int, Organization]) -> Dict[int, Asset]:
 
         for row in reader:
             row = clean_row(row)
-
             org_id = int(row.get("organization_id") or 0)
             org = organizations.get(org_id)
 
-            # Correct column mapping
-            asset_name = row.get("name", "")
-            asset_location = row.get("location", "")
-            asset_owner = row.get("owner", "")
             purchase_raw = row.get("purchase_date", "")
-
             asset_purchase_date = None
             if purchase_raw:
                 try:
-                    asset_purchase_date = datetime.strptime(
-                        purchase_raw, "%Y-%m-%d"
-                    ).date()
+                    asset_purchase_date = datetime.strptime(purchase_raw, "%Y-%m-%d").date()
                 except ValueError:
                     logger.warning(
                         "Invalid date format for asset_id %s: %s",
@@ -114,13 +111,12 @@ def load_assets(organizations: Dict[int, Organization]) -> Dict[int, Asset]:
 
             asset = Asset(
                 asset_id=int(row.get("asset_id") or 0),
-                asset_name=asset_name,
+                asset_name=row.get("name") or "",
                 organization=org,
-                asset_location=asset_location,
+                asset_location=row.get("location") or "",
                 asset_purchase_date=asset_purchase_date,
-                asset_owner=asset_owner
+                asset_owner=row.get("owner") or ""
             )
-
             assets[asset.asset_id] = asset
 
     return assets
@@ -133,17 +129,27 @@ def load_devices(assets: Dict[int, Asset], device_classes: Dict[int, DeviceClass
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
+
         for row in reader:
             row = clean_row(row)
             asset_id = int(row.get("asset_id") or 0)
             device_class_id = int(row.get("device_class_id") or 0)
+
+            device_class = device_classes.get(device_class_id)
+            if device_class is None:
+                logger.error(
+                    "Missing device_class_id %s for device_id %s. Skipping.",
+                    device_class_id, row.get("device_id")
+                )
+                continue  # skip invalid device
+
             device = Device(
                 device_id=int(row.get("device_id") or 0),
-                device_ip=row.get("device_ip") or "",
+                device_ip=row.get("ip_address") or "",
                 asset=assets.get(asset_id),
-                device_class=device_classes.get(device_class_id),
-                device_serial=row.get("device_serial") or "",
-                device_manufacturer=row.get("device_manufacturer") or ""
+                device_class=device_class,
+                device_serial=row.get("serial_number") or "",
+                device_manufacturer=row.get("manufacturer") or ""
             )
             devices[device.device_id] = device
     return devices
@@ -156,6 +162,7 @@ def load_interfaces(devices: Dict[int, Device]) -> Dict[int, Interface]:
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
+
         for row in reader:
             row = clean_row(row)
             device_id = int(row.get("device_id") or 0)
@@ -177,15 +184,16 @@ def load_events(devices: Dict[int, Device], interfaces: Dict[int, Interface]) ->
     with open(file, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         reader.fieldnames = [h.strip() for h in reader.fieldnames]
+
         for row in reader:
             row = clean_row(row)
             device_id = int(row.get("device_id") or 0)
             interface_id = row.get("interface_id")
             device = devices.get(device_id)
             interface = interfaces.get(int(interface_id)) if interface_id else None
+
             timestamp_str = row.get("event_timestamp") or row.get("timestamp") or ""
             try:
-                # Handle ISO 8601 with T or space
                 if "T" in timestamp_str:
                     event_timestamp = datetime.strptime(timestamp_str, "%Y-%m-%dT%H:%M:%S")
                 else:
@@ -196,6 +204,7 @@ def load_events(devices: Dict[int, Device], interfaces: Dict[int, Interface]) ->
                     row.get("event_id"), timestamp_str
                 )
                 event_timestamp = datetime.now()
+
             event = Event(
                 event_id=int(row.get("event_id") or 0),
                 event_timestamp=event_timestamp,

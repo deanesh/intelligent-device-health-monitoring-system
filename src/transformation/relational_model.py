@@ -6,13 +6,15 @@ from typing import List, Optional
 
 class Organization:
     def __init__(self, organization_id: int, org_name: str, org_industry: str = "",
-                 org_address: str = "", org_email: str = "", org_phone: str = ""):
+                 org_address: str = "", org_email: str = "", org_phone: str = "",
+                 org_country: str = ""):  # <-- added country
         self.organization_id = organization_id
         self.org_name = org_name
         self.org_industry = org_industry
         self.org_address = org_address
         self.org_email = org_email
         self.org_phone = org_phone
+        self.org_country = org_country  # store country
         self.assets: List["Asset"] = []
 
     def add_asset(self, asset: "Asset"):
@@ -52,20 +54,23 @@ class DeviceClass:
 
 class Device:
     def __init__(self, device_id: int, device_ip: str, asset: Asset,
-                 device_class: DeviceClass, device_serial: str = "",
+                 device_class: Optional[DeviceClass] = None,  # <-- make optional
+                 device_serial: str = "",
                  device_manufacturer: str = ""):
         self.device_id = device_id
         self.device_ip = device_ip
         self.asset = asset
-        self.device_class = device_class
+        self.device_class = device_class  # can be None if missing
         self.device_serial = device_serial
         self.device_manufacturer = device_manufacturer
         self.interfaces: List["Interface"] = []
         self.events: List["Event"] = []
 
-        # Link device to asset and device class
+        # Link device to asset
         asset.add_device(self)
-        device_class.add_device(self)
+        # Link to device class if exists
+        if device_class is not None:
+            device_class.add_device(self)
 
     def add_interface(self, interface: "Interface"):
         self.interfaces.append(interface)
